@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode"> <!-- Default to dark mode -->
+    <div class="container">
+        <h1>Image Generator</h1>
+        <div class="form-group">
+            <label for="prompt">Prompt:</label>
+            <input type="text" id="prompt" placeholder="Enter your prompt here">
+        </div>
+        <div class="form-group">
+            <label for="width">Width:</label>
+            <input type="number" id="width" placeholder="1024" value="1024">
+        </div>
+        <div class="form-group">
+            <label for="height">Height:</label>
+            <input type="number" id="height" placeholder="1024" value="1024">
+        </div>
+        <div class="form-group">
+            <label for="seed">Seed:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="number" id="seed" placeholder="20" value="20">
+                <input type="checkbox" id="randomSeed">
+                <label for="randomSeed" style="margin-left: 5px;">Random Seed</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="model">Model:</label>
+            <select id="model">
+                <option value="flux">flux</option>
+                <option value="flux-pro">flux-pro</option>
+                <option value="flux-realism">flux-realism</option>
+                <option value="flux-anime">flux-anime</option>
+                <option value="flux-3d">flux-3d</option>
+                <option value="flux-cablyai">flux-cablyai</option>
+                <option value="turbo" selected>turbo</option> <!-- Default selected model -->
+            </select>
+        </div>
+        <div class="form-group options">
+            <label>Options:</label>
+            <div class="checkbox-group">
+                <div>
+                    <input type="checkbox" id="noLogo" checked>
+                    <label for="noLogo">No Logo</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="enhance" checked>
+                    <label for="enhance">Enhancers</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="private" checked>
+                    <label for="private">Private</label>
+                </div>
+            </div>
+        </div>
+        <button id="generateButton">Generate Image</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
